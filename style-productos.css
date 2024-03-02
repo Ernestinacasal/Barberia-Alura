@@ -1,0 +1,262 @@
+body{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0px;
+}
+
+.caja{ /*img con lista todo junto*/
+    width:940px;
+    position:relative;
+    margin:0px auto;
+}
+
+nav{ /*la lista como se mueve en conjunto*/
+    position: absolute;
+    top:110px;
+    right:0px;
+}
+
+/*no los puedo juntar a estos porque se junta cada palabra de la lista en una posicion*/
+
+nav li{ /*cada item de la lista*/
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{ /*cada palabra de la lista*/
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav a:hover{
+    color:aquamarine;
+    text-decoration: underline;
+}
+.productos{
+    width: 940px;
+    margin:0px auto; 
+    padding: 50px;  
+}
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin:0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;     /*le digo que incluya esos 20px en el 30% de cada elemento*/
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+h2{
+    font-size: 30px;
+}
+.productos-descripcion{
+    font-size: 18px;
+}
+.productos-precio{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+.productos li:hover {
+    border-color:aquamarine;
+}
+.productos li:active{ /*cuando hago click*/
+    border-color: pink;
+}
+.productos li:hover h2{
+    font-size:33px
+}
+
+footer{
+    background: url(imagenes/imagenes/bg.jpg);
+    text-align: center;
+    padding: 40px
+}
+#copy{
+    color:#FFFFFF;
+    font-size:13px;
+    margin:20px
+}
+
+form{
+    margin:40px 0px 
+}
+form label, form legend{ /*titulos*/
+    display: block;
+    font-size: 20px;
+    margin:10px 0 10px
+}
+
+.input-padrón{  /*caja de input*/
+    display: block;
+    margin: 0px 0 20px;
+    padding:10px 25px;
+    width: 50%;
+}
+
+.parrafo, .checkbox{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.checkbox{
+    margin: 20px, 0px;
+}
+
+
+.enviar:hover{
+    font-size: 20px;
+    background-color: darkcyan;
+    transition: 1s;
+    transform: scale(1.2)
+}
+.enviar{
+    width:40%;
+    padding:15px 0px;
+    font-size: 18px;
+    font-weight: bolder;
+    color:white;
+    background-color: pink;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+table{
+    margin: 40px 40px;
+    font-size:20px;
+    background: #BBBBBB;
+}
+thead{
+    background-color: darkcyan;
+    color:white;
+    text-align: center;
+    font-weight: bold;
+}
+th, td{
+    border: 1px solid black;
+    padding:8px 10px;
+}
+
+
+/*CSS para home*/
+.banner{
+    width:100%
+}
+
+.subtitulos{
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+}
+.principal{
+    padding: 3em 0;
+    background-color: #FEFEFE;
+    width:940px;
+    margin:0 auto;
+}
+.principal p{
+    margin: 0 0 1em;
+}
+.principal strong{
+    font-weight: bolder;
+}
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+    width:120px;
+    float:left;
+    margin:0 20px 20px 0;
+}
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(white,#888888)
+}
+.mapa p{
+    margin:0 0 2em;
+    text-align: center;
+}
+.mapa-contenido{
+    width:940px;
+    margin:0 auto;
+}
+.diferenciales{
+    padding:3em 0;
+    background: #888888;
+}
+.contenidos-diferenciales{
+    width:640px;
+    margin: 0 auto;
+}
+.lista-diferenciales{
+    width:40%;
+    display: inline-block;
+    vertical-align: top;
+}
+.imagen-diferenciales{
+    width:60%;
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 15px #000000;
+}
+
+.items{
+    line-height: 1.5;
+}
+.items:first-child{
+    font-weight: bolder;
+}
+.items:before{
+    content:"✽"
+}
+
+
+.video{
+    width:560px;
+    margin:1em auto;
+}
+
+@media screen and (max-width: 480px) {
+    .caja{ /*img del logo con lista de home,prod,cont todo junto*/
+        width:auto;
+        margin:auto;
+    }
+    h1, form{
+        text-align: center;
+    }
+    nav/*Home,prod,cont*/{
+        position: static;
+    }
+    .input-padrón, table{
+        margin: auto;
+    }
+    table{
+        position: static;
+    }
+    .productos li /*toda la lista en conjunto*/{
+        margin: 20px;
+        width:auto;
+        height: auto;
+    }
+    .productos h2, .productos-descripcion, .productos-precio{
+        box-sizing: border-box;  /* Hace que el borde se incluya en el ancho y alto del contenedor */
+        display:inline-flex; /* Permite que el contenedor se ajuste al contenido */
+    }
+    .principal, .mapa-contenido, .contenidos-diferenciales, .video{
+        width:auto;
+    }
+    .lista-diferenciales, .imagen-diferenciales, .productos, .productos img/*hago que la imagen ocupe el 100% del cuadro*/{
+        width: 100%
+    }
+    
+}
+
